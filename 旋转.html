@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    body{
+        overflow: hidden;
+        margin: 0;
+
+    }
+.zhuan{
+    position:relative;
+    width: 760px;
+    height: 760px;
+    margin: 30px auto;
+    background-color: blue;
+    animation:rotate1 10s  infinite linear;
+    border-radius: 30%;
+
+}
+
+.pic1{
+    height: 170px;
+    width: 130px;
+    position:relative;
+    background-color: aqua ;
+
+}
+@keyframes rotate1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+</style>
+
+
+</head>
+<body>
+    <div class="zhuan">
+        <div class="pic1"></div>
+    </div>
+    
+</body>
+</html>

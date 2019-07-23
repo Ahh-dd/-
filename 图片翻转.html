@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-wrap {
+            height: 750px;
+            padding-top: 127px;
+            background-image: url(images/2.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .nav-wrap ul {
+            display: flex;
+            /* 开启弹性盒模型 */
+            justify-content: space-around;
+            /* 两端对齐 */
+            width: 1080px;
+            height: 420px;
+            margin: 0 auto;
+            /* background-color: pink; */
+        }
+
+        .nav-wrap ul li {
+            width: 200px;
+            height: 380px;
+            /* margin:0 8px; */
+            /* background-color: blanchedalmond; */
+            float: left;
+        }
+
+        .nav-wrap ul li:nth-child(2n) {
+            /*选中到所有的偶数的li */
+            transform: translateY(40px);
+        }
+
+        /* .nav-wrap ul li img.before {
+            position: absolute;
+            transform: rotateY(0deg);
+            backface-visibility: hidden;
+            /*背面隐藏*/
+           /* transition: all .4s ease;
+        }
+
+        .nav-wrap ul li img.after {
+            position: absolute;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+            transition: all .4s ease;
+        } */
+        
+        .nav-wrap ul li img.before,.nav-wrap ul li img.after{
+            position: absolute;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+            transition: all .4s ease;
+        }
+
+        .nav-wrap ul li img.before {
+            transform: rotateY(0deg);
+        }
+
+        .nav-wrap ul li:hover .before {
+            transform: rotateY(180deg);
+        }
+
+        .nav-wrap ul li:hover .after {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-wrap">
+        <ul>
+            <li>
+                <img class="before" src="./images/x.jpg" width="200px" height="380px">
+                <img class="after" src="./images/5.jpg" width="200px" height="380px">
+            </li>
+
+            <li>
+                <img class="before" src="./images/x.jpg" width="200px" height="380px">
+                <img class="after" src="./images/5.jpg" width="200px" height="380px"> 
+            </li>
+            <li>
+                 <img class="before" src="./images/x.jpg" width="200px" height="380px">
+                <img class="after" src="./images/5.jpg" width="200px" height="380px">
+            </li>
+            <li>
+                <img class="before" src="./images/x.jpg" width="200px" height="380px">
+                <img class="after" src="./images/5.jpg" width="200px" height="380px">
+             </li>
+            <li> 
+                <img class="before" src="./images/x.jpg" width="200px" height="380px">
+               <a href="http://www.baidu.com">
+                    <img class="after" src="./images/5.jpg" width="200px" height="380px">
+               </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

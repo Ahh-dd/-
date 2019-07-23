@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    body{
+        overflow: hidden;
+        background: rgb(25,35,125);
+    }
+    .drop-container{
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        /* background: red; */
+        margin: auto;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .drop{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 100% 5% 100% 100%;
+        background: deepskyblue;
+        top:-25px;
+        transform: rotate(-45deg);
+        margin: 0;
+        animation:drip 4s forwards;
+    }
+
+    h1{
+        color: #fff;
+        position: absolute;
+        font-size: 40px;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        height: 1em;
+        z-index: 2;
+        opacity: 0;
+        animation: appear 2s 2.5s forwards;
+    }
+
+    @keyframes appear{
+        0%{
+            opacity:0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .drop-container:before,
+    .drop-container:after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 75%;
+        height: 75%;
+        border-radius: 100%;
+        border: 5px solid skyblue;
+        opacity: 0;
+        top:55%;
+        right: 50%;
+        transform: translate(50%) rotateX(75deg);
+        animation: dripple 2s ease-out 1s;
+    }
+    
+        .drop-container:after{
+            animation: dripple 2s ease-out 1.7s;
+        }
+
+    @keyframes drip{ /*滴下*/
+        45%{
+            top:0;
+            border-radius: 100% 5% 100% 100%;
+            transform: rotate(-45deg);
+        }
+        100%{
+            top:0;
+            transform: rotate(0deg);
+            border-radius: 100%;
+        }
+    }
+
+    @keyframes dripple {
+        0%{
+            width:150px;
+            height: 150px;
+        }
+        25%{
+            opacity: 1;
+        }
+        100%{
+            width: 500px;
+            height: 500px;
+            top:-25%;
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>A HONG HONG</h1>
+    <div class="drop-container">
+        <div class="drop"></div>
+    </div>
+</body>
+</html>
